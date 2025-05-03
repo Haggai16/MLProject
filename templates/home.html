@@ -105,7 +105,14 @@
         </div>
     </form>
     <h2>
-       THE  prediction is {{results}}
+        {% if results %}
+        <div style="margin-top: 30px; display: flex; justify-content: center;">
+            <div style="background-color: #f0f8ff; padding: 20px 30px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); text-align: center; max-width: 400px;">
+                <h2 style="color: #333;">Prediction Result</h2>
+                <p style="font-size: 20px; color: #007bff; font-weight: bold;">Your predicted Math score is: {{ results }}</p>
+            </div>
+        </div>
+        {% endif %}        
     </h2>
    <body>
 </html>
